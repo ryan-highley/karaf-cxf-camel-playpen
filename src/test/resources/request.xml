@@ -1,0 +1,35 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:model="http://model.eipractice.redhat.com/order/1.0/"
+  xmlns:order="http://eipractice.redhat.com/order/1.0/"
+  >
+  <soapenv:Body>
+    <order:placeOrder>
+      <model:order xmlns="http://model.eipractice.redhat.com/order/1.0/">
+  
+        <customer id="A0001">
+          <name>Antwerp Zoo</name>
+          <city>Antwerp</city>
+          <country>BE</country>
+        </customer>
+        
+        <date>2012-03-01</date>
+  
+        <orderlines>
+          <orderline>
+            <article id="A0001">
+              <description>Aardvark</description>
+            </article>
+            <quantity>1</quantity>
+          </orderline>
+          <orderline>
+            <article id="A0011">
+              <description>Alpaca</description>
+            </article>
+            <quantity>10</quantity>
+          </orderline>
+        </orderlines>
+  
+      </model:order>
+    </order:placeOrder>
+  </soapenv:Body>
+</soapenv:Envelope>
